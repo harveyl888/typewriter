@@ -1,8 +1,11 @@
 ---
 title: "Typewriter Example"
+format: html
 typewriter:
   prefix: "Hi I'm Bob and I'm a "
   strings: ["writer", "designer"]
+  loop: true
+css: style.css
 ---
 
 ## Heading
