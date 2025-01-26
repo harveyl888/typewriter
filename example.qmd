@@ -1,7 +1,8 @@
 ---
 title: "Typewriter Example"
 typewriter:
-  strings: ["A", "B"]
+  prefix: "Hi I'm Bob and I'm a "
+  strings: ["writer", "designer"]
 ---
 
 ## Heading

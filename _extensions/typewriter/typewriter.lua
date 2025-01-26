@@ -14,6 +14,14 @@ return {
 
       local typewriter = meta.typewriter
 
+      -- prefix
+      if typewriter.prefix then
+        prefix = pandoc.utils.stringify(typewriter.prefix)
+      else
+        prefix = ""
+      end
+
+      -- strings
       if typewriter.strings then
         strings = ""
         for _, s in ipairs(typewriter.strings) do
@@ -24,18 +32,20 @@ return {
         return pandoc.RawBlock('html', '<div></div>')
       end
 
-      print(strings)
-
       ensureHtmlDeps()
 
       local rtn = string.format([[
-        <div id='typewriter'></div>
+        <div class="typewriter">
+          <span class="typewriter-prefix">%s</span>
+          <span id="typewritertext" class="typewriter-text"></span>
+        </div>
+
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                new Typewriter('#typewriter', {strings: [%s],autoStart: true,});
+                new Typewriter('#typewritertext', {strings: [%s],autoStart: true,});
             });
         </script>
-      ]], strings)
+      ]], prefix, strings)
 
       return pandoc.RawBlock('html', rtn)
     end
