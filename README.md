@@ -1,6 +1,6 @@
 # Typewriter Extension For Quarto
 
-Shortcode to use Typewriterjs typewriter effect ![https://github.com/tameemsafi/typewriterjs](https://github.com/tameemsafi/typewriterjs).
+Shortcode to use Typewriterjs typewriter effect [https://github.com/tameemsafi/typewriterjs](https://github.com/tameemsafi/typewriterjs).
 
 ## Installing
 
