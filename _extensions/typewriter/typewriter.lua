@@ -2,6 +2,7 @@ local function ensureHtmlDeps()
   quarto.doc.add_html_dependency({
     name = 'typewriter',
     version = '1.0.0',
+    stylesheets = {'assets/css/style.css'},
     scripts = {'assets/js/core.js'}
   })
 end
